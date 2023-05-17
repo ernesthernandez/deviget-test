@@ -1,3 +1,4 @@
+auth.json
 /.warden
 /.buildpath
 /.cache
@@ -18,6 +19,12 @@ atlassian*
 /app/config_sandbox
 /app/etc/env.php
 /app/etc/warden*
+/setup/*
+!/setup/.htaccess
+/dev/*
+!/dev/.htaccess
+/lib/*
+!/lib/.htaccess
 /app/code/Magento/TestModule*
 /lib/internal/flex/uploader/.actionScriptProperties
 /lib/internal/flex/uploader/.flexProperties
