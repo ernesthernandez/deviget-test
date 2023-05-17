@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="title" content="Custom CMS page in Magento" />
+        <meta name="keywords" content="magento, developer, coding" />
+        <meta name="description" content="This is a sample SEO-friendly CMS page in magento." />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block name="about-me"
+                   template="Ernest_AboutMe::about/me.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Ernest\AboutMe\ViewModel\AboutMeDetails</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

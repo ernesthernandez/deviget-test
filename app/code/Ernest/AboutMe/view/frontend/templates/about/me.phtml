@@ -1,0 +1,30 @@
+<?php
+declare(strict_types=1);
+
+use Ernest\AboutMe\ViewModel\AboutMeDetails;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var $block Template */
+/** @var $escaper Escaper */
+/** @var $viewModel AboutMeDetails */
+$viewModel = $block->getData('view_model');
+?>
+<div class="c-about-me">
+    <header class="c-about-me__header">
+        <h1 class="c-about-me__header--title">
+            <?= $escaper->escapeHtml($viewModel->getTitle()) ?>
+        </h1>
+        <img src="<?= $escaper->escapeUrl(
+            $block->getViewFileUrl('Ernest_AboutMe::images/zelda-tearskingdom-artwork.jpg')
+        ) ?>" alt="Ernest Hernandez - My Hero"/>
+    </header>
+    <main class="c-about-me__content">
+        <section class="c-about-me__content--description">
+            <h2><?= __('Pioneering') ?> <strong><?= __('E-commerce Excellence')?></strong></h2>
+            <?php foreach ($viewModel->getParagraphs() as $text): ?>
+                <p><?= $escaper->escapeHtml($text) ?></p>
+            <?php endforeach ?>
+        </section>
+    </main>
+</div>
