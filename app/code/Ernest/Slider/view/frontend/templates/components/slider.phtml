@@ -1,0 +1,19 @@
+<?php
+declare(strict_types=1);
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var $block Template */
+/** @var $escaper Escaper */
+?>
+<div class="c-slider pagebuilder-slider slick-slider slick-dotted" data-mage-init='{"slider": {}}'>
+    <div class="c-slider__slide">
+        <img src="<?= $escaper->escapeHtmlAttr($block->getViewFileUrl('Ernest_Slider::images/slide-1.jpeg')) ?>"
+             alt="<?= $escaper->escapeHtmlAttr(__('Slide 1')) ?>"/>
+    </div>
+    <div class="c-slider__slide">
+        <img src="<?= $escaper->escapeHtmlAttr($block->getViewFileUrl('Ernest_Slider::images/slide-2.jpeg')) ?>"
+             alt="<?= $escaper->escapeHtmlAttr(__('Slide 2')) ?>"/>
+    </div>
+</div>

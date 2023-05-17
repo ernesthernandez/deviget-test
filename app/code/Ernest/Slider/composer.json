@@ -1,0 +1,22 @@
+{
+    "name": "ernest/module-slider",
+    "description": "Module that implement slider",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Ernest Hernandez",
+            "email": "htc.ernest.hernandez@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ernest\\Slider\\": ""
+        }
+    }
+}
