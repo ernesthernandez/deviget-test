@@ -3,4 +3,11 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Ernest\DummyContent\Api\ConfigProviderInterface"
                 type="Ernest\DummyContent\Model\ConfigProvider" />
+    <type name="Magento\Theme\Model\View\Design">
+        <arguments>
+            <argument name="themes" xsi:type="array">
+                <item name="frontend" xsi:type="string">ernest/ww_default</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
